@@ -25,7 +25,7 @@ static std::string frag_shader(
         "out vec4 output_color;\n"
         "void main()\n"
         "{\n"
-        "       output_color = vec4(1.0f, 1.0f, 1.0f, 1.0f);\n"
+        "       output_color = vec4(0.78f, 0.132f, 0.132f, 1.0f);\n"
         "}\n"
 );
 
@@ -104,7 +104,7 @@ static void init(void)
 
 static void draw(void)
 {
-        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+        glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
         glUseProgram(main_program);
