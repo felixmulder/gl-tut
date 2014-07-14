@@ -121,6 +121,11 @@ static void draw(void)
         /* main loop will swap buffers */
 }
 
+void window_resized(GLFWwindow *window, int width, int height)
+{
+        glViewport(0, 0, (GLsizei)width, (GLsizei)height);
+}
+
 int main(void)
 {
         GLFWwindow *window;
@@ -138,6 +143,7 @@ int main(void)
 
         /* set current context for window */
         glfwMakeContextCurrent(window);
+        glfwSetWindowSizeCallback(window, window_resized);
 
         /* init glew */
         if (glewInit() != GLEW_OK) {
