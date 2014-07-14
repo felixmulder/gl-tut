@@ -123,7 +123,8 @@ static void draw(void)
 
 void window_resized(GLFWwindow *window, int width, int height)
 {
-        glViewport(0, 0, (GLsizei)width, (GLsizei)height);
+        int new_height = (int)((9*width) / 16.0 + 0.5);
+        glViewport(0, new_height/2, (GLsizei)width, (GLsizei)new_height);
 }
 
 int main(void)
